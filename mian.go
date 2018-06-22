@@ -12,6 +12,7 @@ func main() {
 	// start
 
 	// end
+	fmt.Println()
 	fmt.Println("press enter to continue...")
 	fmt.Scanln()
 }
