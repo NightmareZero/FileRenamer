@@ -68,6 +68,8 @@ func (that *File) IsExist() bool {
 func Rename(file *File) (err error) {
 	err = nil
 	err = os.Rename(file.GetPath(), file.GetNewPath())
-	file.setPath(file.GetNewPath())
+	if nil == err {
+		file.setPath(file.GetNewPath())
+	}
 	return
 }
