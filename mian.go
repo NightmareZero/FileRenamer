@@ -11,7 +11,7 @@ import (
 func main() {
 	args := os.Args
 	argSize := len(os.Args)
-	fmt.Println("input args", args[1:argSize])
+	// fmt.Println("input args", args[1:argSize])
 	// start
 	now := time.Now()
 	for i := 1; i < argSize; i++ {
@@ -19,7 +19,7 @@ func main() {
 		afterTime := now.Add(time.Second * time.Duration(i))
 		itFile.Name = timetool.GetTime(afterTime)
 		file.Rename(itFile)
-		fmt.Print(itFile.GetPath())
+		fmt.Println(itFile.GetPath())
 	}
 
 	// end
